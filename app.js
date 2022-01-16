@@ -1,16 +1,16 @@
 const express = require('express')
 const path = require('path')
 const hbs = require('hbs')
-const geocode = require('./components/geocode.js')
-const forecast = require('./components/forecast.js')
+const geocode = require('./src/components/geocode.js')
+const forecast = require('./src/components/forecast.js')
 
 const app = express()
 const port = process.env.PORT || 3000
 
-const publicDirectoryPath = path.join(__dirname,'../public')
-const partialsPath = path.join(__dirname,'./partials')
+const publicDirectoryPath = path.join(__dirname,'./public')
+const partialsPath = path.join(__dirname,'./src/partials')
 
-app.set('view engine', 'hbs')
+app.set('view engine', '.hbs')
 
 hbs.registerPartials(partialsPath)
 
